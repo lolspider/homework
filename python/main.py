@@ -25,20 +25,22 @@ while True:
     try:
         entry = input("Please input the date, separated by space：")
         year, month, day = map(int, entry.split())
-        if is_leap_year(year):
-            days_per_month = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-        if year <= 0 or month <= 0 or day <= 0:
-            print("Error: input must > 0, try again")
-            continue
-        if not (month <= 12 and day <= 31):
-            print("Error: Month or Day is not valid")
-            continue
-        if day > days_per_month[month - 1]:
-            print("Error: No such day in the month you input")
-            continue
-        break
     except ValueError as e:
         print("Error: Please check your input: %s" % e)
+        continue
+
+    if is_leap_year(year):
+        days_per_month = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
+    if year <= 0 or month <= 0 or day <= 0:
+        print("Error: input must > 0, try again")
+        continue
+    if not (month <= 12 and day <= 31):
+        print("Error: Month or Day is not valid")
+        continue
+    if day > days_per_month[month - 1]:
+        print("Error: No such day in the month you input")
+        continue
+    break
 
 result = day
 if month > 1:
