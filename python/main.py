@@ -4,9 +4,9 @@
  2. 世纪闰年：能被400整除（如2000年是世纪闰年，1900年不是世纪闰年)
 """
 
-year, month, day = 0, 0, 0
+year, month, day, result = 0, 0, 0, 0
 days_per_month = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-result = 0
+
 
 
 def is_leap_year(y):
