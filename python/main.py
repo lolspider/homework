@@ -30,10 +30,7 @@ while True:
 
     if is_leap_year(year):
         days_per_month = (31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
-    if year <= 0 or month <= 0 or day <= 0:
-        print("Error: input must > 0, try again")
-        continue
-    if not (month <= 12 and day <= 31):
+    if not (year > 0 and 1 <= month <= 12 and 1 <= day <= 31):
         print("Error: Month or Day is not valid")
         continue
     if day > days_per_month[month - 1]:
