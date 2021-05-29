@@ -8,7 +8,6 @@ year, month, day, result = 0, 0, 0, 0
 days_per_month = (31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 
 
-
 def is_leap_year(y):
     """
     :param y: int, year
@@ -48,7 +47,3 @@ if month > 1:
         result += days_per_month[m-1]
 
 print("The result is: %i" % result)
-
-
-
-
